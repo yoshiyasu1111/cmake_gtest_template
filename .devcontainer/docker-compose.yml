@@ -1,0 +1,15 @@
+version: '3'
+services:
+
+  googletest:
+    image: googletest
+    container_name: googletest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ${PWD}:/work
+    working_dir: /work
+    tty: true
+    command: /bin/bash
+  
